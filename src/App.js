@@ -1,4 +1,5 @@
 import './App.css';
+import { GlobalStyle } from './Styles/globalStyles';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import ListItem from './ListItem';
@@ -16,8 +17,8 @@ function App() {
   // console.log("response:",data)
   return (
     <div className="App">
+      <GlobalStyle />
       <ListItem data={data} />
-      
     </div>
   );
 }
