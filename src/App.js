@@ -4,13 +4,13 @@ import axios from 'axios';
 import ListItem from './ListItem';
 
 const API_KEY = process.env.REACT_APP_NASA_KEY;
-const count = 10;
+const callCount = 10;
 
 function App() {
   const [isLoading, setLoading] = useState(true); 
   const [data, setData] = useState(null);
   useEffect(() => {
-    axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=${count}`)
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=${callCount}`)
     .then(res => {
       setData(res.data)
       setLoading(false) 

@@ -9,8 +9,9 @@ import { toast } from 'react-toastify';
 const ItemStyled = styled.div`
 display: flex;
 flex-direction: column;
-margin: 2vw;
+margin: auto;
 padding: 2vw;
+width: 75%;
 background-color: #F3F1F5;
 border: solid 3px rgb(205, 199, 199);
 border-radius:2%;
@@ -19,7 +20,7 @@ transition: transform 0.25s ease-out;
 :hover {
     transform: scale(1.03);`
 
-const HeadeStyled = styled.div`
+const HeadStyled = styled.div`
 display:flex;
 align-items:center;
 justify-content: space-between;
@@ -70,10 +71,10 @@ export default function Item ({ item }) {
     return (
         <ItemStyled>
             <>
-                <HeadeStyled>
+                <HeadStyled>
                     <h1>{item.title}</h1> 
                     <p>{item.date}</p>
-                </HeadeStyled> 
+                </HeadStyled> 
                 <Images src={item.url} alt={item.title}/>
                 <p>{item.explanation}</p>
                 <Footer>
