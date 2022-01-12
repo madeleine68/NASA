@@ -1,13 +1,10 @@
 import styled, { keyframes } from "styled-components";
-import { FaRegHeart, FaHeart, FaBootstrap } from 'react-icons/fa';
+import { FaRegHeart, FaHeart } from 'react-icons/fa';
 import { RiFileCopyLine } from 'react-icons/ri';
 import { bounce } from 'react-animations'
 import { useState } from "react";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
-
-
-
 
 const ItemStyled = styled.div`
 display: flex;
@@ -24,7 +21,7 @@ transition: transform 0.25s ease-out;
 
 const HeadeStyled = styled.div`
 display:flex;
-align-item:center;
+align-items:center;
 justify-content: space-between;
 `    
 
@@ -60,8 +57,11 @@ cursor: grab;
 `
 
 export default function Item ({ item }) {
-    const [like, setLike] = useState(false)
-    const handleLike = () => setLike(!like)
+    const [like, setLike] = useState(false);
+    
+    const handleLike = () => {
+        setLike(!like);
+    }
     const handleShare = () => {
         navigator.clipboard.writeText(item.url)
         toast("Image url copied to clipboard!");
@@ -76,10 +76,9 @@ export default function Item ({ item }) {
                 </HeadeStyled> 
                 <Images src={item.url} alt={item.title}/>
                 <p>{item.explanation}</p>
-
                 <Footer>
                     <Button onClick={handleLike}>
-                            {like && <FaHeart />} 
+                            {like && <FaHeart />}
                         <Bounce> 
                             {!like && <FaRegHeart />}
                         </Bounce>
