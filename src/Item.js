@@ -4,7 +4,7 @@ import { RiFileCopyLine } from 'react-icons/ri';
 import { bounce } from 'react-animations';
 import { useState } from "react";
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const ItemStyled = styled.div`
 display: flex;
@@ -88,7 +88,7 @@ export default function Item ({ item }) {
                     </CopyStyle>
                 </Footer>   
             </>
-            <ToastContainer />
+            
         </ItemStyled>
     )
 }

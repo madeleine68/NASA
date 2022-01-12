@@ -1,6 +1,7 @@
 import Item from "./Item";
 import { Grid } from 'react-loader-spinner';
 import styled from "styled-components";
+import { ToastContainer } from 'react-toastify';
 
 const GridStyle = styled.div`
 position: absolute;
@@ -18,6 +19,7 @@ export default function ListItem ({ data, isLoading }) {
                     <Item key={id} item={item}/>
                 
                 ))}
+                <ToastContainer />
             </div>
     )
 }
