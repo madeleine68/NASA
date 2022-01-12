@@ -9,8 +9,8 @@ import { toast } from 'react-toastify';
 const ItemStyled = styled.div`
 display: flex;
 flex-direction: column;
-margin: auto;
-padding: 2vw;
+margin: 3vw auto;
+padding: 3vw;
 width: 75%;
 background-color: #F3F1F5;
 border: solid 3px rgb(205, 199, 199);
