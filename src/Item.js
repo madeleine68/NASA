@@ -12,6 +12,7 @@ flex-direction: column;
 margin: 3vw auto;
 padding: 3vw;
 width: 75%;
+height: auto;
 background-color: #F3F1F5;
 border: solid 3px rgb(205, 199, 199);
 border-radius:2%;
@@ -28,7 +29,7 @@ justify-content: space-between;
 
 const Images = styled.img`
 width:100%;
-height: 500px;
+height: auto;
 border-radius:2%;
 `
 const Button = styled.a`
