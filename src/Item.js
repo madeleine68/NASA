@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { FaRegHeart, FaHeart } from 'react-icons/fa';
 import { RiFileCopyLine } from 'react-icons/ri';
-import { bounce } from 'react-animations'
+import { bounce } from 'react-animations';
 import { useState } from "react";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
